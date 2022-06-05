@@ -12,15 +12,22 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+	private let factories: [AssemblyProtocol] = [
+		ApplicationLayerAssembly(),
+		ServiceLayerAssembly(),
+		DataLayerAssembly(),
+		DomainLayerAssembly(),
+		PresentationLayerAssembly()
+	]
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions
 					 launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+		let container = Container()
 		window = UIWindow(frame: UIScreen.main.bounds)
-		let mainTabBarController = MainTabBarController()
-		mainTabBarController.tabBar.tintColor = .green
-		mainTabBarController.tabBar.backgroundColor = .black
-		window?.rootViewController = mainTabBarController
+
+		factories.forEach { $0.configure(container) }
+		window?.rootViewController = try? container.resolve(type: MainTabBarController.self)
 		window?.makeKeyAndVisible()
 		return true
 	}

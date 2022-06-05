@@ -19,8 +19,10 @@ final class MainTabBarController: UITabBarController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		viewControllers = [ createMainController(), createSearchController(), createLibraryController() ]
 		UITabBar.appearance().barTintColor = .black
+		UITabBar.appearance().tintColor = .green
+		UITabBar.appearance().backgroundColor = .black
+		viewControllers = [ createMainController(), createSearchController(), createLibraryController() ]
 	}
 
 	// MARK: - Private functions

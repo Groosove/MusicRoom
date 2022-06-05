@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A083E54284CAC98003ABCDA /* ApplicationLayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A083E53284CAC98003ABCDA /* ApplicationLayerAssembly.swift */; };
+		4A083E56284CACAE003ABCDA /* ServiceLayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A083E55284CACAE003ABCDA /* ServiceLayerAssembly.swift */; };
+		4A083E58284CACBD003ABCDA /* DataLayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A083E57284CACBD003ABCDA /* DataLayerAssembly.swift */; };
+		4A083E5A284CACCA003ABCDA /* DomainLayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A083E59284CACCA003ABCDA /* DomainLayerAssembly.swift */; };
+		4A083E5C284CACE7003ABCDA /* PresentationLayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A083E5B284CACE7003ABCDA /* PresentationLayerAssembly.swift */; };
 		4A17D55D27E61AD00093063F /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A17D55C27E61AD00093063F /* AlbumCollectionViewCell.swift */; };
 		4A24901B280B83B9006B7942 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A24901A280B83B9006B7942 /* HeaderView.swift */; };
 		4A5829E927DD4A4100FE43C0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5829E827DD4A4100FE43C0 /* SearchViewController.swift */; };
@@ -47,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A083E53284CAC98003ABCDA /* ApplicationLayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationLayerAssembly.swift; sourceTree = "<group>"; };
+		4A083E55284CACAE003ABCDA /* ServiceLayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayerAssembly.swift; sourceTree = "<group>"; };
+		4A083E57284CACBD003ABCDA /* DataLayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerAssembly.swift; sourceTree = "<group>"; };
+		4A083E59284CACCA003ABCDA /* DomainLayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainLayerAssembly.swift; sourceTree = "<group>"; };
+		4A083E5B284CACE7003ABCDA /* PresentationLayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationLayerAssembly.swift; sourceTree = "<group>"; };
 		4A17D55C27E61AD00093063F /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		4A24901A280B83B9006B7942 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		4A5829E827DD4A4100FE43C0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -98,33 +108,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A5829E427DD42C000FE43C0 /* Service Layer */ = {
+		4A083E5D284CAD3D003ABCDA /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4A083E53284CAC98003ABCDA /* ApplicationLayerAssembly.swift */,
+				4ADA557B27C41B27005203DA /* DIContainer */,
+				4AECB2ED27C2024200ABCAAC /* AppDelegate.swift */,
 			);
-			name = "Service Layer";
+			name = ApplicationLayer;
 			sourceTree = "<group>";
 		};
-		4A5829E527DD42D500FE43C0 /* Data Layer */ = {
+		4A083E5F284CAD83003ABCDA /* InstanceStorage */ = {
 			isa = PBXGroup;
 			children = (
+				4ADA558027C41B49005203DA /* ObjectScope.swift */,
+				4ADA557F27C41B49005203DA /* InstanceStorage.swift */,
+				4ADA557D27C41B49005203DA /* StorageFactory.swift */,
 			);
-			name = "Data Layer";
+			name = InstanceStorage;
 			sourceTree = "<group>";
 		};
-		4A5829E627DD42E300FE43C0 /* Presentation Layer */ = {
+		4A5829E427DD42C000FE43C0 /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4A083E55284CACAE003ABCDA /* ServiceLayerAssembly.swift */,
+			);
+			name = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		4A5829E527DD42D500FE43C0 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4A083E57284CACBD003ABCDA /* DataLayerAssembly.swift */,
+			);
+			name = DataLayer;
+			sourceTree = "<group>";
+		};
+		4A5829E627DD42E300FE43C0 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4A5829EA27DD4A6700FE43C0 /* LibraryViewController.swift */,
+				4A5829E827DD4A4100FE43C0 /* SearchViewController.swift */,
+				4ADA558927C42D3A005203DA /* MainTabBarController.swift */,
+				4A083E5B284CACE7003ABCDA /* PresentationLayerAssembly.swift */,
 				4A5829EC27DE55B600FE43C0 /*  MainView */,
 			);
-			name = "Presentation Layer";
+			name = PresentationLayer;
 			sourceTree = "<group>";
 		};
-		4A5829E727DD49F500FE43C0 /* Domain Layer */ = {
+		4A5829E727DD49F500FE43C0 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4A083E59284CACCA003ABCDA /* DomainLayerAssembly.swift */,
 			);
-			name = "Domain Layer";
+			name = DomainLayer;
 			sourceTree = "<group>";
 		};
 		4A5829EC27DE55B600FE43C0 /*  MainView */ = {
@@ -145,19 +182,9 @@
 				4ADA557E27C41B49005203DA /* Container.swift */,
 				4ADA558127C41B49005203DA /* Dependency.swift */,
 				4ADA557C27C41B49005203DA /* AssemblyProtocol.swift */,
-				4ADA558827C41B53005203DA /* InstanceStorage */,
+				4A083E5F284CAD83003ABCDA /* InstanceStorage */,
 			);
 			name = DIContainer;
-			sourceTree = "<group>";
-		};
-		4ADA558827C41B53005203DA /* InstanceStorage */ = {
-			isa = PBXGroup;
-			children = (
-				4ADA558027C41B49005203DA /* ObjectScope.swift */,
-				4ADA557F27C41B49005203DA /* InstanceStorage.swift */,
-				4ADA557D27C41B49005203DA /* StorageFactory.swift */,
-			);
-			path = InstanceStorage;
 			sourceTree = "<group>";
 		};
 		4AECB2E127C2024200ABCAAC = {
@@ -183,15 +210,11 @@
 		4AECB2EC27C2024200ABCAAC /* MusicRoom */ = {
 			isa = PBXGroup;
 			children = (
-				4ADA557B27C41B27005203DA /* DIContainer */,
-				4A5829E627DD42E300FE43C0 /* Presentation Layer */,
-				4A5829E427DD42C000FE43C0 /* Service Layer */,
-				4A5829E727DD49F500FE43C0 /* Domain Layer */,
-				4A5829E527DD42D500FE43C0 /* Data Layer */,
-				4AECB2ED27C2024200ABCAAC /* AppDelegate.swift */,
-				4A5829EA27DD4A6700FE43C0 /* LibraryViewController.swift */,
-				4A5829E827DD4A4100FE43C0 /* SearchViewController.swift */,
-				4ADA558927C42D3A005203DA /* MainTabBarController.swift */,
+				4A083E5D284CAD3D003ABCDA /* ApplicationLayer */,
+				4A5829E427DD42C000FE43C0 /* ServiceLayer */,
+				4A5829E527DD42D500FE43C0 /* DataLayer */,
+				4A5829E727DD49F500FE43C0 /* DomainLayer */,
+				4A5829E627DD42E300FE43C0 /* PresentationLayer */,
 				4AECB2F927C2024600ABCAAC /* Assets.xcassets */,
 				4AECB2FB27C2024600ABCAAC /* LaunchScreen.storyboard */,
 				4AECB2FE27C2024600ABCAAC /* Info.plist */,
@@ -374,13 +397,18 @@
 				4A17D55D27E61AD00093063F /* AlbumCollectionViewCell.swift in Sources */,
 				4ADA558427C41B49005203DA /* Container.swift in Sources */,
 				4ADA558A27C42D3A005203DA /* MainTabBarController.swift in Sources */,
+				4A083E54284CAC98003ABCDA /* ApplicationLayerAssembly.swift in Sources */,
 				4AECB2F227C2024200ABCAAC /* MainViewController.swift in Sources */,
 				4ADA558727C41B49005203DA /* Dependency.swift in Sources */,
 				4AECB2EE27C2024200ABCAAC /* AppDelegate.swift in Sources */,
 				4ADA558527C41B49005203DA /* InstanceStorage.swift in Sources */,
 				4ADA558627C41B49005203DA /* ObjectScope.swift in Sources */,
+				4A083E5C284CACE7003ABCDA /* PresentationLayerAssembly.swift in Sources */,
 				4ADA558327C41B49005203DA /* StorageFactory.swift in Sources */,
 				4A5829EB27DD4A6700FE43C0 /* LibraryViewController.swift in Sources */,
+				4A083E56284CACAE003ABCDA /* ServiceLayerAssembly.swift in Sources */,
+				4A083E58284CACBD003ABCDA /* DataLayerAssembly.swift in Sources */,
+				4A083E5A284CACCA003ABCDA /* DomainLayerAssembly.swift in Sources */,
 				4ADA558227C41B49005203DA /* AssemblyProtocol.swift in Sources */,
 				4A24901B280B83B9006B7942 /* HeaderView.swift in Sources */,
 			);
